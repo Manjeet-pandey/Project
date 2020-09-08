@@ -13,125 +13,156 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           color: Colors.white,
-          padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
+          // padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
           alignment: Alignment.center,
           child: Column(
             children: [
-              // decoration: BoxDecoration(
-              //     image: DecorationImage(
-              //         image: AssetImage('assets/background.jpg'),
-              //         fit: BoxFit.fill)),
-
-              Row(
+              Column(
                 children: [
-                  Container(
-                    //alignment: Alignment.topLeft,
-                    //padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
-                    height: 150,
-                    width: 150,
-                    decoration: BoxDecoration(
-                        // color: Colors.cyan[200],
-                        shape: BoxShape.circle,
-                        // border: Border.all(
-                        //   color: Colors.black,
-                        //   width: 5,
-                        // ),
-                        image: DecorationImage(
-                            image: AssetImage('assets/kire.png'),
-                            fit: BoxFit.fill)),
+                  // decoration: BoxDecoration(
+                  //     image: DecorationImage(
+                  //         image: AssetImage('assets/background.jpg'),
+                  //         fit: BoxFit.fill)),
+
+                  Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.fromLTRB(20, 20, 0, 0),
+                        //alignment: Alignment.topLeft,
+                        //padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
+                        height: 150,
+                        width: 150,
+                        decoration: BoxDecoration(
+                            // color: Colors.cyan[200],
+                            shape: BoxShape.circle,
+                            // border: Border.all(
+                            //   color: Colors.black,
+                            //   width: 5,
+                            // ),
+                            image: DecorationImage(
+                                image: AssetImage('assets/kire.png'),
+                                fit: BoxFit.fill)),
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
+                            alignment: Alignment.center,
+                            child: Row(children: [
+                              Text(
+                                'Kiran Bhattarai',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25,
+                                  //color: Colors.cyan[200],
+                                ),
+                              ),
+                              Text(
+                                ', 20',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25,
+                                  //color: Colors.cyan[200],
+                                ),
+                              )
+                            ]),
+                          ),
+                          Container(
+                            padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
+                            child: Text(
+                              '10 Kilometers Away',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                   Column(
                     children: [
                       Container(
-                        padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                        alignment: Alignment.center,
-                        child: Row(children: [
-                          Text(
-                            'Kiran Bhattarai',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 25,
-                              //color: Colors.cyan[200],
-                            ),
+                        alignment: Alignment.bottomLeft,
+                        padding: EdgeInsets.fromLTRB(20, 20, 0, 20),
+                        child: Text(
+                          "Just a useless Fellow",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
                           ),
-                          Text(
-                            ', 20',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 25,
-                              //color: Colors.cyan[200],
-                            ),
-                          )
-                        ]),
+                        ),
                       ),
                       Container(
-                        child: Text(
-                          '10 Kilometers Away',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                          ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            // Expanded(
+                            //   flex: 1,
+
+                            // child:
+                            Container(
+                              height: 50,
+                              width: 200,
+                              decoration: BoxDecoration(
+                                border: Border(
+                                  right: BorderSide(
+                                    width: 1.0,
+                                  ),
+                                ),
+                              ),
+                              //width: 200,
+                              child: FlatButton(
+                                onPressed: () {},
+                                color: Colors.white,
+                                splashColor: Colors.cyan,
+                                child: Text(
+                                  'About',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 30,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            // Expanded(
+                            //   flex: 1,
+                            //   child:
+
+                            Container(
+                              height: 50,
+                              decoration: BoxDecoration(
+                                border: Border(
+                                  left: BorderSide(
+                                    width: 1.0,
+                                  ),
+                                ),
+                              ),
+                              //  width: 180,
+                              child: FlatButton(
+                                //padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                                onPressed: () {},
+                                color: Colors.white,
+                                splashColor: Colors.cyan,
+                                child: Text(
+                                  'Photos',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 30,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ],
                   ),
                 ],
               ),
-              Column(
-                children: [
-                  Container(
-                    child: RaisedButton(
-                      onPressed: () {},
-                      color: Colors.blue,
-                      elevation: 8,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Text(
-                        'Match',
-                        style: TextStyle(
-                          fontStyle: FontStyle.normal,
-                          fontSize: 20,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        FlatButton(
-                          onPressed: () {},
-                          padding: EdgeInsets.fromLTRB(50, 0, 00, 0),
-                          color: Colors.white,
-                          child: Text(
-                            'About',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 30,
-                            ),
-                          ),
-                        ),
-                        FlatButton(
-                          //padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
-                          onPressed: () {},
-                          color: Colors.white,
-                          child: Text(
-                            'Photos',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 30,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+              Container(),
             ],
           ),
         ),
